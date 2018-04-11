@@ -1,0 +1,64 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<link rel="stylesheet" href="D:\前端\练习\test2.css" type="text/css">
+<script src="D:\前端\练习\jquery\js\jquery-2.1.1.min.js"></script>
+<style>
+h1{
+ width: 100%;
+ height: 80px;
+ line-height: 80px;
+ text-align: center;
+ color: green;
+ margin: 10px auto;
+ font-size: 5em;
+ font-weight: normal;
+ background-image: -webkit-linear-gradient(left, #167993, #fbe500 25%, #167993 50%, #fbe500 75%, #167993);
+ background-size: 200% 100%;
+ -webkit-text-fill-color: transparent;/*文字镂空*/
+ -webkit-background-clip: text;/*背景裁切得剩下文字*/
+ -webkit-animation: mask 4s infinite linear;
+}
+@-webkit-keyframes mask {
+ 0% { background-position:0 0;}
+ 
+ 100% { background-position:100% 0;}
+}
+
+p{
+ width:100%;
+ height: 80px;
+ line-height: 80px;
+ text-align: center;
+ color: #999;
+ margin: 10px auto;
+ font-size: 2em;
+ -webkit-box-reflect:below 5px ; /*倒影效果*/   
+ background-image:-webkit-linear-gradient(left, #999, #999 5%,#fff 10%, #999 15%, #999);
+ -webkit-text-fill-color:transparent;
+ background-size:200% 100%;
+ -webkit-background-clip:text;
+ -webkit-animation: anim 5s infinite;
+}
+@-webkit-keyframes anim{
+ 0%{background-position:0 0;}
+ 100%{background-position:-100% 0;}
+}
+.blur {
+ margin:80px auto;
+ color:transparent; 
+ font-size: 2em;
+ text-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+</style>
+</head>
+
+<body>
+
+<h1>风乍起，吹皱一池春水</h1> 
+<p>最是那一低头的温柔，恰似一朵海莲花不胜凉风的娇羞</p>
+<div class="blur">很久也没有那种小步跑去迎接一个人的快乐了</div>
+
+</body> 
+</html>
