@@ -1,0 +1,255 @@
+﻿<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+body,ul,li,div{magin:0;padding:0;}
+ul,li{list-style:none;}
+a{text-decoration:none;}
+
+.circle{
+	width:30px;
+	height:30px;
+	border-radius:100%;
+	margin:20px auto;	
+	background-color:green;
+	-webkit-animation:fadeOut 1s infinite ease-in-out;
+	animation:fadeOut 1s infinite ease-in-out;
+}
+@-webkit-keyframes fadeOut{
+	from{-webkit-transform:scale(0,0);}
+	to{-webkit-transform:scale(1,1);opacity:0;}
+}
+
+@keyframes fadeOut{
+	from{transform:scale(0,0);}
+	to{transform:scale(1,1);opacity:0;}
+}
+
+#load{
+	width:300px;
+	height:30px;
+	margin:50px auto;	
+	
+}
+#load>div{
+	width:5px;
+	height:30px;
+	display:inline-block;
+	background-color:green;
+	animation:delay 5s infinite ease-in-out;
+}
+#load .line1{
+	-webkit-animation-delay:-0.8s;
+}
+#load .line2{
+	-webkit-animation-delay:-0.6s;
+}
+#load .line3{
+	-webkit-animation-delay:-0.4s;
+}
+#load .line4{
+	-webkit-animation-delay:-0.2s;
+}
+#load .line5{
+	-webkit-animation-delay:-0.18s;
+}
+@-webkit-keyframes delay{
+	0%,40%,100%{
+		-webkit-transform:scaleY(0.4);
+	}
+	20%{
+		-webkit-transform:scaleY(1);opacity:0;
+	}
+}
+
+#circle-turn{
+	width:50px;
+	height:50px;
+	border:5px solid #ccc;
+	border-left-color:#000;
+	position:absolute;
+	top:0;
+	border-radius:100%;
+	animation:loading 2s infinite ease-in-out;
+}
+@-webkit-keyframes loading{
+	from{
+		-webkit-transform:translateX(0px) rotate(0deg);
+	}
+	to{
+		-webkit-transform:translateX(500px) rotate(360deg);
+	}
+}
+
+.turn_page{
+	width:300px;
+	height:200px;
+	background-color:#ccc;
+	position:absolute;
+	top:30px;
+	right:20px;
+}
+.turn_page::before{
+	content:'';
+	position:absolute;/*注意设置其定位*/
+    top:0;
+	right:0;
+	border-style:solid;
+	border-width:0;
+	background-color:#eee;
+	border-color:rgba(0,0,0,0) #fff;
+	-webkit-transition:all .4s ease-out;
+	transition:all .4s ease-out;
+}
+.turn_page:hover::before{
+    border-left-width:50px;
+	border-top-width:50px;
+}
+
+.title,.pic,.border{
+	width:300px;
+	height:300px;
+    border-radius:50%;
+	background:#eee;
+}
+.title{
+	position:relative;
+	left:500px;
+}
+.title .border{
+	position:absolute;
+	top:0;
+	left:0;
+	border:10px solid #072256;
+	border-left-color:#f23;
+	border-top-color:#000;
+	box-sizing:border-box;
+	transition:all 5s ease-in;
+}
+.title:hover .border{
+	transform:rotate(180deg);
+}
+.round{
+    text-align:center;    
+    transition:all 2s;   
+    width:100px;          
+    height:100px;
+    line-height:100px;  	
+    background:pink;    
+    border-radius:50%; 
+    font-size:10px;	
+	margin-top:-350px;
+   }   
+.round:hover{   
+    transition:all 2s;   
+    background:red;   
+    transform-origin:50 100;   
+    transform:rotate(360deg);   
+    border-radius:50%;   
+}   
+
+#nav{      
+    width:200px;   
+    height:120px;   
+    position:relative;   
+    top:50px;
+	left:200px;
+	display:block;
+    background-color:#ccc;
+	position:relative;
+}
+#nav li{
+	margin-bottom:5px;
+}
+#nav .home,#nav .laptop{ 
+    width:52px;
+    height:50px;
+    background-color:#eee;	
+	overflow:hidden;
+	position:relative;
+} 
+#nav span{
+	width:150px;   
+    height:50px;
+	line-height:50px;
+	font-size:15px;
+    text-align:center;
+	margin-left:3px;
+	
+}
+
+#nav .home::after,#nav .laptop::after{   
+   content:'';   
+   display:block;   
+   width:0;   
+   height:0;   
+   position:absolute;   
+   right:-10px;   
+   bottom:0;  
+   background-color:red;   
+   border-top:26px solid transparent;   
+   border-right:16px solid transparent;   
+   border-bottom:26px solid transparent;
+}
+#nav .laptop:hover ,#nav .home:hover{
+	width:150px; 
+	transition:width 2s;
+}
+.triangle{   
+    width: 0px;   
+    height: 0px;
+    border-width: 50px;
+    border-style: solid;
+    border-color: #f00 transparent transparent;/*将剩下的边隐藏*/
+}  
+.sector{   
+    width: 0px;   
+    height: 0px;
+    border-width: 50px;
+    border-style: solid;
+    border-color: #f00 transparent transparent;/*将剩下的边隐藏*/
+	border-radius:50%;
+}   
+</style>
+</head>
+
+<body>
+
+<div class="circle"></div><!--圆形加载-->
+
+<div id="load"><!--线条加载-->
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+    <div class="line4"></div>
+    <div class="line5"></div>
+</div>
+
+<div id="circle-turn"></div><!--原因转动-->
+
+<div class="turn_page"></div><!--页面折角-->
+
+<div class="title">
+  <div class="pic"></div>
+   <div class="border"></div>
+</div>
+
+<div class="round">变色且旋转360</div> 
+
+<div id="nav"> 
+  <ul>  
+   <li class="home"><span>home 主界面</span></li>  
+   <li class="laptop"><span>count &nbsp统计界面</span></li>  
+  </ul> 
+</div>
+
+<div class="triangle"></div>
+<div class="sector"></div>
+
+</body>
+</html>
+
+
+ 
+ 
