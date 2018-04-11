@@ -1,0 +1,153 @@
+﻿<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="D:\前端\练习\test2.css" type="text/css">
+<script src="D:\前端\练习\jquery\js\jquery-2.1.1.min.js"></script>
+<script src="D:\前端\练习\demo.js"></script>
+
+<script type="text/javascript">
+
+</script> 
+<style>
+body{
+    background:#bbd149;
+    margin: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+ }
+.box{
+    height: 30px;
+    width: 30px;
+	border-radius: 5px;
+    background: #fff;
+	position:relative;
+    left:-50px;
+    top:0;
+	
+ }
+.box:after{
+    content: '';
+    height:8px; 
+	width: 30px; 
+    background: #000; 
+    opacity: .6; 
+    border-radius: 50%;
+    position: absolute; 
+	left: 0px;
+    top: 35px;
+    animation: shadow .5s linear infinite;
+ }
+.box1{
+    height: 50px;
+    width: 50px;
+    position:relative;
+	border-radius: 5px;
+    background: #fff;
+    left: 0px;
+    top: 0;
+ }
+.box1::after{
+    content: '';
+    height:8px; 
+	width:50px; 
+    background:#000; 
+    opacity:0.6; 
+    border-radius: 50%;
+    position:absolute;
+	top: 60px;
+    left: 0px;
+    animation: shadow .5s linear infinite;
+ }
+.box2{
+    height: 80px;
+    width: 80px;
+    position:relative;
+   
+ }
+.box2::before{
+ content: '';
+ height: 80px; 
+ width: 80px; 
+ background: #fff; 
+ border-radius: 5%;
+ position: absolute;
+ top: 0px;
+ left: 50px;
+ animation:trans  .5s linear infinite;
+ }
+.box2::after{
+    content: '';
+    height:8px; 
+	width: 80px; 
+    background:#000; 
+    opacity:0.6; 
+    border-radius: 50%;
+    position: absolute;
+	top:100px;
+    left:50px;
+    animation: shadow .5s linear infinite;
+ }
+.box3{
+    height: 100px;
+    width: 100px;
+    position:relative;
+	border-radius: 5px;
+    background: #fff;
+    left:110px;
+    top: 0;
+	animation: rotate .5s linear infinite;
+ }
+ .box3::after{
+    content: '';
+    height:8px; 
+	width: 100px; 
+    background: #000; 
+    opacity: .6; 
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: 120px;
+    animation: shadow .5s linear infinite;
+ }
+@keyframes shadow {
+ 0%, 100% {transform: scaleX(1);}
+ 50% {transform: scaleX(1.2);}
+}
+@keyframes rotate {
+ 0%, 100% {transform: translateY(0px) scaleX(1);}
+ 50% {transform:translateY(10px) scaleX(1.2);}
+}
+@keyframes trans {
+ 0% {
+ transform: translateY(0) rotate(0deg);
+ }
+ 25% {
+ transform: translateY(10px) rotate(22.5deg);
+ }
+ 50% {
+ transform: translateY(20px) scale(1.1, 0.9) rotate(45deg);
+ border-bottom-right-radius: 50px;
+ }
+ 75% {
+ ransform: translateY(10px) rotate(67.5deg);
+ }
+ 100% {
+ transform: translateY(0) rotate(90deg);
+ }
+}
+ 
+ </style>
+</head> 
+<body> 
+<div class="box"></div>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+
+</body> 
+</html> 
+
+
+ 
+ 
