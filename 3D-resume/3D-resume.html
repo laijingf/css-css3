@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="3D-resume.css" type="text/css">
+<script src="jquery\js\jquery-2.1.1.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="my3d">
+
+<div id="page1">
+    <div id="page_group1">
+       <img src="me.jpg">
+       
+       <h3>赖境锋</h3>
+       <p>Call me:<span>159-8910-3001</span></p><br/>
+       <p>E-mail:15989103001@163.com</p><br/>
+       <p>渴望成为一名Web前端开发工程师</p><br/>
+       <p>The only way to do great work is to love what you do.</p>
+    </div>
+</div>
+
+<div id="page2">
+ <div id="page_group2">
+    <h2>专业技能</h2>
+    <ul>
+	<li>CSS/CSS3、HTML/HTML5</li>
+	<li>CET4、photoshop</li>
+	<li>Vue.JS、jQuery、Bootstrap</li>
+	<li>有Vue.Js开发经验，熟悉项目的开发流程</li>
+	<li>看不见？呵呵···戳我试试看</li>
+	</ul>
+  </div>
+</div>
+
+
+<div id="page3">
+   <div id="page_group3">
+      <h2>教育背景</h2>
+      <p>广州番禺职业技术学院</br></p>
+	  <p>计算机相关专业</p>
+   </div>
+</div>
+
+<div id="page4">
+  <div id="page_group4">
+    <h2>vue2.0+vue-router+element-ui(个人博客页面)</h2>
+	<div class="content">
+	    <ol type="1">
+	      <li>使用vue-cli+webpack+sublime Text3等开发工具</li>
+          <li>使用element-ui布局页面，包括（导航、卡片、跑马灯等</li>
+          <li>使用vue-router进行页面的二级跳转，并加入路由跳转和“页面返回”过渡特效（目前只在“日志”页面实现，具体可看代码</li> 
+        </ol>
+		
+		<p>预览地址：https://laijingf.github.io/my-blog/dist/index.html</p>
+    </div>
+  </div>
+</div>
+
+<div id="page5">
+    <div id="page_group5">
+    <h2>Bootstrap建站</h2>
+	<div class="content">
+	    <ol type="1">
+	      <li>主要使用Bootstrap3进行响应式布局</li>
+          <li>其中也包含div+css布局</li>
+          <li>引入jQuery进行轮播图的控制</li> 
+        </ol>
+        github地址：https://github.com/laijingf 
+    </div>
+    </div>
+</div>
+
+</div>
+
+<div id="op">
+     <button><a href="javascript:next()">next</a></button>
+     <button><a href="javascript:prev()">previous</a></button>
+</div>
+
+<script type="text/javascript">
+ var curIndex=1; 
+ function next(){
+    if(curIndex==5)
+	 return;
+     var curPage=document.getElementById("page"+curIndex);
+	     curPage.style.transform="rotateY(90deg) translateZ(5000px)";
+	
+	     curIndex++;
+	
+	 var nextPage=document.getElementById("page"+curIndex);
+	     nextPage.style.transform="rotateY(0deg) translateZ(0)";
+	}
+ 
+ function prev(){
+    if(curIndex==1)
+	 return;
+	var curPage=document.getElementById("page"+curIndex);
+	    curPage.style.transform="rotateY(180deg) translateZ(500px)";
+	
+	    curIndex--;
+	
+	var prevPage=document.getElementById("page"+curIndex);
+	    prevPage.style.transform="rotate(0deg) translateZ(0)"; 
+ }
+</script>
+</body>
+</html>
+ 
