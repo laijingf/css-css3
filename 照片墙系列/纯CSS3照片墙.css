@@ -1,0 +1,66 @@
+#wall{
+    width:1000px;
+    height:700px;  
+	position:absolute;
+	top:10%;
+	left:10%;
+	background-color:#eee;
+	
+}
+#wall h1{
+	text-align:center;
+	
+}
+#wall h1:hover{
+	cursor:pointer;
+	transform:rotate(720deg);
+	transition:all .8s ease;
+}
+#wall img{
+   position:absolute;
+   top:150px;
+   left:300px;
+   display:block;
+   padding:10px 10px 30px 10px;
+   border:1px solid #bfbfbf;
+   background-color:#fff;
+   transition:1s;
+   z-index:1;
+   
+   
+}
+#wall img:hover{
+	transform:scale(1.7) rotateZ(0) ;
+	box-shsdow:10px 10px 10px 5px #555;
+	z-index:2;
+}
+
+#wall .infobg1{
+	
+	top:130px;
+	left:90px;
+    transform:rotateZ(5deg);
+	
+	
+}
+#wall .infobg2{
+   
+    top:100px;
+	left:160px;
+	transform:rotateZ(10deg);
+	
+}
+
+#wall .infobg3{
+  
+	top:160px;
+	left:230px;
+	transform:rotateZ(15deg);
+	
+}
+#wall .infobg4{
+	
+	top:120px;
+	left:320px;
+	transform:rotateZ(20deg);
+}
